@@ -1,5 +1,13 @@
 'use strict';
 
 require( 'ractive/ractive.runtime' );
-window.b = require( './ractives/Base' );
-window.rt = new b()
+window.b = require( './views/Graph' );
+window.Router = require( './utils/Router' );
+Router.route( {
+    Main: function () {
+        return new b( {
+            el: '.hook'
+        } );
+    }
+} );
+Router.base( "Main" );
