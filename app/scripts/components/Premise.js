@@ -1,11 +1,8 @@
 'use strict';
 
-var Ractive = require( 'ractive/ractive.runtime' );
+var Ractive = require( 'ractive/ractive.runtime' ),
+    template = require( './premise.ract' ),
+    loadTemplate = require( './../utils/loadTemplate' );
 
-var Premise = Ractive.extend( {
-    template: require( './premise.ract' ).template,
-    isolated: true,
-    data: {}
-} );
-
+var Premise = Ractive.extend( loadTemplate( template ) );
 module.exports = Premise;

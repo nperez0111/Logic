@@ -2,8 +2,9 @@
     <div class="left"></div>
     <div class="right">
         <div class="premises">
-            {{#each premises}}
-            <Premise test='{{this}}' /> {{/each}}
+            {{#each premises:i}}
+            <Premise content={{this}}></Premise>
+            {{/each}}
         </div>
     </div>
 </div>

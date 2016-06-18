@@ -1,1 +1,17 @@
-<div class="test">{{test}}</div>
+<div class="premise">
+    <h1>{{title}}</h1>{{content}}</div>
+<style>
+    .premise {
+        width: 100%;
+        min-height: 150px;
+        background: #c3c3c3;
+    }
+</style>
+<script>
+    component.exports = {
+        isolated: true,
+        data: {
+            title: "test"
+        }
+    }
+</script>
