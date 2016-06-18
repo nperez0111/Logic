@@ -5,5 +5,8 @@ module.exports = Base.extend( {
         return {
             premises: [ 'yes', 'no' ]
         }
+    },
+    components: {
+        Premise: require( './../components/Premise.js' )
     }
 } );
