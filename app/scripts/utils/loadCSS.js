@@ -1,6 +1,6 @@
+var loadCss = require( 'insert-css' );
 module.exports = function ( template ) {
-    var css = document.createElement( "style" );
-    css.type = "text/css";
-    css.innerHTML = template.css;
-    document.body.appendChild( css );
+    loadCss( template.css, {
+        prepend: true
+    } );
 }
