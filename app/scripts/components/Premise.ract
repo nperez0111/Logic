@@ -1,15 +1,19 @@
 <div class="premise">
-    <h1>{{title}}</h1>{{content}}</div>
+    <h1>{{title}}</h1>{{content}}
+    <button on-click='test'>click</button>
+</div>
 <style>
     .premise {
         width: 100%;
         min-height: 150px;
         background: #c3c3c3;
+        border-radius: 15px;
     }
 </style>
 <script>
     component.exports = {
-        isolated: true,
+
+        isolated: false,
         data: {
             title: "test"
         }

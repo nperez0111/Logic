@@ -1,6 +1,7 @@
 'use strict';
 
-require( 'ractive/ractive.runtime' );
+var Ractive = require( 'ractive/ractive.runtime' );
+Ractive.DEBUG = /unminified/.test( function () { /*unminified*/ } );
 window.b = require( './views/Graph' );
 window.Router = require( './utils/Router' );
 Router.route( {
