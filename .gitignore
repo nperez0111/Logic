@@ -6,3 +6,4 @@ dist
 logs
 .DS_Store
 .sass-cache
+*/*.scssc
