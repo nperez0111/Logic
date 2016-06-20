@@ -1,5 +1,4 @@
 <div id='{{el}}' class='editor'>
-    {{content}}
 </div>
 <style>
     .editor {
@@ -12,15 +11,28 @@
 <script>
     var Editor = require('./../abstractions/editor');
     component.exports = {
+        editor: null,
         oncomplete: function () {
             var el = document.getElementById(this.get('el'));
-            Editor(el);
-            console.log(this.get('content'))
+            this.editor = Editor({
+                element: el,
+                placeholder: this.get('placeholder')
+            });
+            this.on('ev', function () {
+                console.log('event')
+                this.editor.insHTML('<a href>woa</a>');
+            });
+
         },
         computed: {
             el: {
                 get: function () {
                     return this.get('id') || 'editor';
+                }
+            },
+            placeholder: {
+                get: function () {
+                    return this.get('place') || 'placeholder';
                 }
             }
         },

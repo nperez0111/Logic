@@ -3,7 +3,7 @@
     <div class="right">
         <div class="premises">
             {{#each premises:i}}
-            <Premise content={{this}}></Premise>
+            <Premise>{{premises[i]}}</Premise>
             {{/each}}
         </div>
     </div>

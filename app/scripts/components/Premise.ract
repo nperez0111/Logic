@@ -1,7 +1,7 @@
 <div class="premise">
-    <h1>{{title}}</h1>{{content}}
+    <h1>{{title}}</h1>{{>content}}
     <button on-click='test'>click</button>
-    <Editor id='{{content}}' title="test" />
+    <Editor id='{{>content}}' place="test"></Editor>
 </div>
 <style>
     .premise {
@@ -15,8 +15,15 @@
     component.exports = {
 
         isolated: false,
-        data: {
-            title: "test"
+        data: function () {
+            return {
+                title: "test"
+            };
         },
+        oncomplete: function () {
+            this.on('test', function () {
+                this.findComponent('Editor').fire('ev');
+            });
+        }
     }
 </script>
