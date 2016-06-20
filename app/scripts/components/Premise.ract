@@ -16,6 +16,13 @@
         isolated: false,
         data: {
             title: "test"
-        }
+        },
+        oncomplete: function () {
+        console.log( 'I be Made' );
+        this.on( 'test', function ( woa ) {
+            console.log( 'fired' )
+            this.set( 'title', 'button' )
+        } )
+    }
     }
 </script>

@@ -12,7 +12,5 @@ module.exports = Base.extend( {
             }
         }
     },
-    components: {
-        Premise: require( './../components/Premise.js' )
-    }
+    components: require( './../components/LoadComponent' )( 'ALL' )
 } );
