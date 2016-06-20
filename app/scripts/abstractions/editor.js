@@ -16,21 +16,16 @@ module.exports = function ( options ) {
                 editor.destroy();
                 return manip;
             },
-            undo: function () {
-                editor.undo();
-                return manip;
-            },
-            redo: function () {
-                editor.redo();
-                return manip;
-            },
             getCurVal: function () {
                 return editor.value( undefined );
             },
             setCurVal: function ( val ) {
                 editor.value( val );
                 return manip;
-            }
+            },
+            get: function () {
+                return editor;
+            },
         };
     return manip;
 }
