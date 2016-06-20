@@ -1,0 +1,29 @@
+<div id='{{el}}' class='editor'>
+    {{content}}
+</div>
+<style>
+    .editor {
+        width: 100%;
+        min-width: 100px;
+        box-shadow: 0px 3px 15px 2px #F5F5F0;
+        padding: 10px;
+    }
+</style>
+<script>
+    var Editor = require('./../abstractions/editor');
+    component.exports = {
+        oncomplete: function () {
+            var el = document.getElementById(this.get('el'));
+            Editor(el);
+            console.log(this.get('content'))
+        },
+        computed: {
+            el: {
+                get: function () {
+                    return this.get('id') || 'editor';
+                }
+            }
+        },
+        isolated: true
+    }
+</script>

@@ -1,6 +1,7 @@
 <div class="premise">
     <h1>{{title}}</h1>{{content}}
     <button on-click='test'>click</button>
+    <Editor id='{{content}}' title="test" />
 </div>
 <style>
     .premise {
@@ -17,12 +18,5 @@
         data: {
             title: "test"
         },
-        oncomplete: function () {
-        console.log( 'I be Made' );
-        this.on( 'test', function ( woa ) {
-            console.log( 'fired' )
-            this.set( 'title', 'button' )
-        } )
-    }
     }
 </script>

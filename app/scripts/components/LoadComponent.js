@@ -4,7 +4,8 @@ var Base = require( './../ractives/Base' ),
     o = require( './../ractives/Objects' );
 //base.extend(loadtemplate)
 var components = {
-    Premise: require( './premise.ract' )
+    Premise: require( './Premise.ract' ),
+    Editor: require( './Editor.ract' )
 };
 
 module.exports = function ( component ) {

@@ -1,18 +1,23 @@
 {
-  "name": "logic",
-  "version": "0.0.0",
-  "private": true,
-  "dependencies": {
-    "jQuery": "~1.11.1",
-    "normalize-scss": "~3.0.1"
-  },
-  "overrides": {
-    "page": {
-      "main": "index.js"
+    "name": "logic",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+        "jQuery": "~1.11.1",
+        "normalize-scss": "~3.0.1",
+        "page": "^1.7.1",
+        "Medium.js": "medium.js#^1.0.1"
+    },
+    "overrides": {
+        "page": {
+            "main": "index.js"
+        },
+        "Medium.js": {
+            "main": "medium.css"
+        }
+    },
+    "devDependencies": {
+        "chai": "^1.9.1",
+        "mocha": "^1.21.4"
     }
-  },
-  "devDependencies": {
-    "chai": "^1.9.1",
-    "mocha": "^1.21.4"
-  }
 }
