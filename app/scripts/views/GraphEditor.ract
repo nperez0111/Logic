@@ -1,0 +1,10 @@
+<div class="graph">
+    <div class="left"></div>
+    <div class="right">
+        <div class="premises">
+            {{#each premises:i}}
+            <Premise>{{premises[i]}}</Premise>
+            {{/each}}
+        </div>
+    </div>
+</div>

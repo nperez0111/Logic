@@ -26,7 +26,7 @@ module.exports = {
         } );
     },
     base: function ( route ) {
-        page.base( '/' );
+        page.base( '' );
         page( '/', route );
         page( '', route );
         page( {
