@@ -2,17 +2,23 @@
 
 var Base = require( './../ractives/Base' ),
     o = require( './../ractives/Objects' );
-//base.extend(loadtemplate)
+    
 var components = {
     Premise: require( './Premise.ract' ),
     Editor: require( './Editor.ract' )
 };
 
-module.exports = function ( component ) {
-    if ( component === 'ALL' ) {
-        return o.makeObj( o.keys( components ), o.keys( components ).map( cur => {
-            return Base.extend( components[ cur ] )
-        } ) )
+module.exports = function ( query ) {
+    if ( query === 'ALL' ) {
+        return o.transform( components, cur => {
+            return Base.extend( cur )
+        } )
     }
-    return Base.extend( o.pick( components, component ) );
+    else if( Array.isArray( query ) ) {
+    	return o.transform( o.pick( components, query ), cur => {
+            return Base.extend( cur )
+        } )
+    }
+
+    return Base.extend( o.pick( components, query ) );
 };

@@ -1,5 +1,5 @@
 <div class="graph">
-    <div class="left">View</div>
+    <div class="left"></div>
     <div class="right">
         <div class="premises">
             {{#each premises:i}}

@@ -17,10 +17,18 @@ module.exports = {
         } );
         return this.keys( obj );
     },
+    transform:function(obj,doThat){
+        return this.makeObj( this.keys( obj ), this.keys( obj ).map( function ( cur, i ) {
+            return doThat( obj[ cur ], cur, obj );
+        } ) );
+    },
     pick: function ( obj, prop ) {
         if ( Array.isArray( prop ) ) {
             var ret = {};
             prop.forEach( ( cur ) => {
+                if( !obj.hasOwnProperty(cur) ) {
+                    console.trace(`Object does not have property '${cur}'`);
+                }
                 ret[ cur ] = obj[ cur ];
             } );
             return ret;
@@ -29,5 +37,8 @@ module.exports = {
     },
     keys: function ( obj ) {
         return Object.keys( obj );
+    },
+    objExtend:function( previous, next ) {
+        return Object.assign( {}, previous, next || {} );
     }
 };
