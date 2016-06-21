@@ -34,5 +34,8 @@ module.exports = {
     },
     keys: function ( obj ) {
         return Object.keys( obj );
+    },
+    objFlattenArr:function( previous, next ) {
+        return Object.assign( previous, next );
     }
 };

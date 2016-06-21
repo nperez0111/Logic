@@ -8,11 +8,17 @@ var components = {
     Editor: require( './Editor.ract' )
 };
 
-module.exports = function ( component ) {
-    if ( component === 'ALL' ) {
+module.exports = function ( query ) {
+    if ( query === 'ALL' ) {
         return o.transform( components, cur => {
             return Base.extend( cur )
         } )
     }
-    return Base.extend( o.pick( components, component ) );
+    else if( Array.isArray( query ) ) {
+    	return o.transform( o.pick( components, query ), cur => {
+            return Base.extend( cur )
+        } )
+    }
+
+    return Base.extend( o.pick( components, query ) );
 };

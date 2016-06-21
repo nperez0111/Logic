@@ -12,5 +12,5 @@ module.exports = Base.extend( {
             }
         }
     },
-    components: require( './../components/LoadComponent' )( 'ALL' )
+    components: require( './../components/LoadComponent' )( ['Premise','Editor'] )
 } );
