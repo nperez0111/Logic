@@ -26,6 +26,9 @@ module.exports = {
         if ( Array.isArray( prop ) ) {
             var ret = {};
             prop.forEach( ( cur ) => {
+                if( !obj.hasOwnProperty(cur) ) {
+                    console.trace(`Object does not have property '${cur}'`);
+                }
                 ret[ cur ] = obj[ cur ];
             } );
             return ret;
