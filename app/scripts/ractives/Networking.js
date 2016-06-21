@@ -1,4 +1,4 @@
-var local = require( './LocalStorage.js' );
+var local = require( './../abstractions/LocalStorage' );
 var ajax = require( 'component-ajax' );
 module.exports = {
     cache: {},
