@@ -17,6 +17,11 @@ module.exports = {
         } );
         return this.keys( obj );
     },
+    transform:function(obj,doThat){
+        return this.makeObj( this.keys( obj ), this.keys( obj ).map( function ( cur, i ) {
+            return doThat( obj[ cur ], cur, obj );
+        } ) );
+    },
     pick: function ( obj, prop ) {
         if ( Array.isArray( prop ) ) {
             var ret = {};

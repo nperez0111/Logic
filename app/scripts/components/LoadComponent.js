@@ -10,9 +10,9 @@ var components = {
 
 module.exports = function ( component ) {
     if ( component === 'ALL' ) {
-        return o.makeObj( o.keys( components ), o.keys( components ).map( cur => {
-            return Base.extend( components[ cur ] )
-        } ) )
+        return o.transform( components, cur => {
+            return Base.extend( cur )
+        } )
     }
     return Base.extend( o.pick( components, component ) );
 };
