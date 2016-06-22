@@ -8,15 +8,15 @@ var Editor = require( './views/Editing' ),
 window.Router = require( './abstractions/Router' );
 
 Router.route( {
-    "Graph/editor": function () {
+    "Argument/editor": function () {
         return new Editor( {
             el: '.hook'
         } );
     },
-    "Graph/view": function () {
+    "Argument/view": function () {
         return new Viewer( {
             el: '.hook'
         } );
     }
 } );
-Router.base( "Graph/editor" );
+Router.base( "Argument/editor" );
