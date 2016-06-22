@@ -7,6 +7,7 @@
     "insert-css": "^0.2.0",
     "is-function": "^1.0.1",
     "medium.js": "^1.0.1",
+    "merge": "^1.2.0",
     "path-to-regexp": "^1.5.3",
     "ractive": "0.7.3"
   },

@@ -16,10 +16,8 @@
     component.exports = sharedProps('Premise', {
 
         isolated: false,
-        data: function () {
-            return {
-                title: "we good"
-            };
+        data: {
+            title: "we good"
         },
         computed: {
 

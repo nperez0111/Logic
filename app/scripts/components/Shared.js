@@ -13,10 +13,7 @@ var isFunc = require( 'is-function' ),
         }
     };
 module.exports = function ( key, obj ) {
-    var objToMerge = _.makeObj( _.keys( obj ).filter( cur => {
-            return props.indexOf( cur ) == -1;
-        } ), obj ),
-        merged = _.objExtend( shared[ key ], objToMerge );
+    var merged = _.objExtend( shared[ key ], obj );
     props.forEach( cur => {
         merged[ cur ] = _.objExtend( merged[ cur ], isFunc( obj[ cur ] ) ? obj[ cur ]() : obj[ cur ] );
     } )

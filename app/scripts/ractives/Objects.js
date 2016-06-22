@@ -1,3 +1,4 @@
+var merge = require( 'merge' );
 module.exports = {
     makeObj: function ( keys, values ) {
         var ret = {};
@@ -17,7 +18,7 @@ module.exports = {
         } );
         return this.keys( obj );
     },
-    transform:function(obj,doThat){
+    transform: function ( obj, doThat ) {
         return this.makeObj( this.keys( obj ), this.keys( obj ).map( function ( cur, i ) {
             return doThat( obj[ cur ], cur, obj );
         } ) );
@@ -26,8 +27,8 @@ module.exports = {
         if ( Array.isArray( prop ) ) {
             var ret = {};
             prop.forEach( ( cur ) => {
-                if( !obj.hasOwnProperty(cur) ) {
-                    console.trace(`Object does not have property '${cur}'`);
+                if ( !obj.hasOwnProperty( cur ) ) {
+                    console.trace( `Object does not have property '${cur}'` );
                 }
                 ret[ cur ] = obj[ cur ];
             } );
@@ -38,7 +39,7 @@ module.exports = {
     keys: function ( obj ) {
         return Object.keys( obj );
     },
-    objExtend:function( previous, next ) {
-        return Object.assign( {}, previous, next || {} );
+    objExtend: function ( previous, next ) {
+        return merge.recursive( true, previous, next );
     }
 };
