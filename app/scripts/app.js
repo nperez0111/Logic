@@ -5,7 +5,7 @@ Ractive.DEBUG = /unminified/.test( function () { /*unminified*/ } );
 var Editor = require( './views/Editing' ),
     Viewer = require( './views/View' );
 
-window.Router = require( './utils/Router' );
+window.Router = require( './abstractions/Router' );
 
 Router.route( {
     "Graph/editor": function () {

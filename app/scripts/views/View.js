@@ -1,5 +1,6 @@
-var Base = require( './../ractives/Base.js' );
-module.exports = Base.extend( {
+var Base = require( './../ractives/Base.js' ),
+    sharedProps = require( './../utils/Shared' );
+module.exports = Base.extend( sharedProps( 'Main', {
     template: require( './View.ract' ).template,
     data: function () {
         return {
@@ -7,4 +8,4 @@ module.exports = Base.extend( {
         }
     },
     components: require( './../components/LoadComponent' )( [ 'Premise', 'Viewer' ] )
-} );
+} ) );

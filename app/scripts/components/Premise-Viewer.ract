@@ -12,7 +12,7 @@
     }
 </style>
 <script>
-    var sharedProps = require('./Shared');
+    var sharedProps = require('./../utils/Shared');
     component.exports = sharedProps('Premise', {
 
         isolated: false,
