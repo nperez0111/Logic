@@ -4,12 +4,6 @@ module.exports = Base.extend( {
     data: function () {
         return {
             premises: [ 'yes', 'no' ],
-            data: {
-                logy: function ( a ) {
-                    console.log( a )
-                    return ( a )
-                }
-            }
         }
     },
     components: require( './../components/LoadComponent' )( [ 'Premise', 'Viewer' ] )

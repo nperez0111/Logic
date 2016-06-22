@@ -1,16 +1,10 @@
-var Base = require('./../ractives/Base.js');
-module.exports = Base.extend({
-    template: require('./Editing.ract').template,
+var Base = require( './../ractives/Base.js' );
+module.exports = Base.extend( {
+    template: require( './Editing.ract' ).template,
     data: function () {
         return {
-            premises: ['yes', 'no'],
-            data: {
-                logy: function (a) {
-                    console.log(a)
-                    return (a)
-                }
-            }
+            premises: [ 'yes', 'no' ],
         }
     },
-    components: require('./../components/LoadComponent')(['Premise', 'Editor'])
-});
+    components: require( './../components/LoadComponent' )( [ 'Premise', 'Editor' ] )
+} );
