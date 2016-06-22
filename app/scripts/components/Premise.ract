@@ -1,7 +1,11 @@
 <div class="premise">
     <h1>{{title}}</h1>{{>content}}
     <button on-click='test'>click</button>
+    {{#if editing}}
     <Editor id='{{>content}}' place="test"></Editor>
+    {{else}}
+    <Viewer id='{{>content}}'></Viewer>
+    {{/if}}
 </div>
 <style>
     .premise {

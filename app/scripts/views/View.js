@@ -1,6 +1,6 @@
 var Base = require( './../ractives/Base.js' );
 module.exports = Base.extend( {
-    template: require( './GraphEditor.ract' ).template,
+    template: require( './View.ract' ).template,
     data: function () {
         return {
             premises: [ 'yes', 'no' ],
@@ -12,5 +12,5 @@ module.exports = Base.extend( {
             }
         }
     },
-    components: require( './../components/LoadComponent' )( ['Premise','Editor'] )
+    components: require( './../components/LoadComponent' )( [ 'Premise', 'Viewer' ] )
 } );
