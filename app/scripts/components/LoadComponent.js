@@ -4,9 +4,9 @@ var Base = require( './../ractives/Base' ),
     o = require( './../ractives/Objects' );
 
 var components = {
-    Premise: require( './Premise.ract' ),
+    Premise: require( './Premise-Editor.ract' ),
     Editor: require( './Editor.ract' ),
-    Viewer: require( './Viewer.ract' ),
+    Viewer: require( './Premise-Viewer.ract' ),
 };
 
 module.exports = function ( query ) {

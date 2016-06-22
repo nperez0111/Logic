@@ -16,18 +16,22 @@
     }
 </style>
 <script>
-    component.exports = {
+    var sharedProps = require('./Shared');
+    component.exports = sharedProps('Premise', {
 
         isolated: false,
         data: function () {
             return {
-                title: "test"
+                title: "we good"
             };
+        },
+        computed: {
+
         },
         oncomplete: function () {
             this.on('test', function () {
                 this.findComponent('Editor').fire('ev');
             });
         }
-    }
+    });
 </script>

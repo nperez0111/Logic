@@ -5,6 +5,7 @@
     "component-ajax": "0.0.2",
     "debowerify": "^1.5.0",
     "insert-css": "^0.2.0",
+    "is-function": "^1.0.1",
     "medium.js": "^1.0.1",
     "path-to-regexp": "^1.5.3",
     "ractive": "0.7.3"
