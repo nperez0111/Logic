@@ -12,7 +12,7 @@ module.exports = function ( grunt ) {
 
     // Time how long tasks take. Can help when optimizing build times
     require( 'time-grunt' )( grunt );
-
+    var serveStatic = require( 'serve-static' );
     // Load grunt tasks automatically
     require( 'load-grunt-tasks' )( grunt );
 
@@ -79,9 +79,9 @@ module.exports = function ( grunt ) {
                 options: {
                     middleware: function ( connect ) {
                         return [
-                            connect.static( '.tmp' ),
-                            connect().use( '/bower_components', connect.static( './bower_components' ) ),
-                            connect.static( config.app )
+                            serveStatic( '.tmp' ),
+                            connect().use( '/bower_components', serveStatic( './bower_components' ) ),
+                            serveStatic( config.app )
                         ];
                     }
                 }
@@ -92,10 +92,10 @@ module.exports = function ( grunt ) {
                     port: 9001,
                     middleware: function ( connect ) {
                         return [
-                            connect.static( '.tmp' ),
-                            connect.static( 'test' ),
-                            connect().use( '/bower_components', connect.static( './bower_components' ) ),
-                            connect.static( config.app )
+                            serveStatic( '.tmp' ),
+                            serveStatic( 'test' ),
+                            connect().use( '/bower_components', serveStatic( './bower_components' ) ),
+                            serveStatic( config.app )
                         ];
                     }
                 }
