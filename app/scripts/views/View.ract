@@ -3,7 +3,7 @@
     <div class="right">
         <div class="premises">
             {{#each premises:i}}
-            <Premise editing=false>{{premises[i]}}</Premise>
+            <Viewer editing=false>{{premises[i]}}</Viewer>
             {{/each}}
         </div>
     </div>

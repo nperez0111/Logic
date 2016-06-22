@@ -1,1 +1,29 @@
-test
+<div class="premise">
+    <h1>{{title}}</h1>{{>content}}
+    <button on-click='test'>click</button>
+    <div>Just Display</div>
+</div>
+<style>
+    .premise {
+        width: 100%;
+        min-height: 150px;
+        background: #c3c3c3;
+        border-radius: 15px;
+    }
+</style>
+<script>
+    var sharedProps = require('./Shared');
+    component.exports = sharedProps('Premise', {
+
+        isolated: false,
+        data: function () {
+            return {
+                title: "we alright"
+            };
+        },
+        computed: {
+
+        },
+        oncomplete: function () {}
+    });
+</script>
