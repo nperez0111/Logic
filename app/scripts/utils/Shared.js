@@ -11,7 +11,15 @@ var isFunc = require( 'is-function' ),
             }
 
         },
-        Main: {}
+        Main: {
+            computed: {
+                title: {
+                    get: function () {
+                        return this.get( 'userTitle' ) || `${this.get('userName')}'s Logical Argument`;
+                    }
+                }
+            }
+        }
     };
 module.exports = function ( key, obj ) {
     var merged = _.objExtend( shared[ key ], obj );

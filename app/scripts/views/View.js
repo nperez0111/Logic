@@ -5,7 +5,9 @@ module.exports = Base.extend( sharedProps( 'Main', {
     data: function () {
         return {
             premises: [ 'yes', 'no' ],
+            userName: 'Nick'
         }
     },
+    oncomplete: function () { console.log( this ) },
     components: require( './../components/LoadComponent' )( [ 'Premise', 'Viewer' ] )
 } ) );

@@ -3,3 +3,55 @@
 *:after {
     box-sizing: border-box;
 }
+
+.float-left {
+    display: inline-block;
+    float: left;
+}
+
+.float-right {
+    @extend .float-left;
+    float: right;
+}
+
+.full {
+    width: 100%;
+    @extend .float-left;
+}
+
+.half {
+    width: 50%;
+    @extend .float-left;
+}
+
+.three4 {
+    width: 75%;
+    @extend .float-left;
+}
+
+.one4 {
+    width: 25%;
+    @extend .float-left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.center {
+    margin: 0 auto;
+    display: block;
+}
+
+.header {
+    @extend .center;
+    @extend .text-center;
+    text-transform: capitalize;
+    font-family: Helvetica;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.padMe {
+    padding: 10px;
+}

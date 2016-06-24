@@ -1,14 +1,35 @@
 <div class="premise">
-    <h1>{{title}}</h1>{{>content}}
-    <button on-click='test'>click</button>
-    <div>Just Display</div>
+    <div class="main three4">
+        <h2 class="header full">{{title}}</h2>
+        <div class="body padMe">{{>content}}</div>
+    </div>
+
+    <aside class="one4 padMe">
+        <button>weird</button>
+        <button>woa</button>
+    </aside>
+
 </div>
+
 <style>
     .premise {
-        width: 100%;
+        width: 90%;
+        margin: 10px auto;
         min-height: 150px;
-        background: #c3c3c3;
+        border: 1px solid #c3c3c3;
         border-radius: 15px;
+    }
+    
+    .header {
+        font-size: 2em;
+    }
+    
+    .main {
+        border-right: 1px solid #c3c3c3;
+    }
+    
+    aside {
+        border-top-right-radius: 15px;
     }
 </style>
 <script>

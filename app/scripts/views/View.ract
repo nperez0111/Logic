@@ -1,6 +1,7 @@
+<h1>{{title}}</h1>
 <div class="graph">
-    <div class="left">View</div>
-    <div class="right">
+    <div class="left half">View</div>
+    <div class="right half">
         <div class="premises">
             {{#each premises:i}}
             <Viewer editing=false>{{premises[i]}}</Viewer>
