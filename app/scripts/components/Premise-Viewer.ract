@@ -38,12 +38,14 @@
 
         isolated: false,
         data: function () {
-            return {
-                title: "we alright"
-            };
+            return {};
         },
         computed: {
-
+            title: {
+                get: function () {
+                    return this.get('title') || `Premise #${this.get('index')}`;
+                }
+            }
         },
         oncomplete: function () {}
     });

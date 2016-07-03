@@ -3,8 +3,8 @@
     <div class="left half">View</div>
     <div class="right half">
         <div class="premises">
-            {{#each premises:i}}
-            <Viewer editing=false>{{premises[i]}}</Viewer>
+            {{#each argument.premises:i}}
+            <Viewer index='{{i+1}}' title={{argument.premiseTitles[i]||false}}>{{argument.premises[i]}}</Viewer>
             {{/each}}
         </div>
     </div>

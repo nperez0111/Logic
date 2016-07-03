@@ -1,4 +1,5 @@
-var merge = require( 'merge' );
+var merge = require( 'merge' ),
+    manip = require( 'object-manip' );
 module.exports = {
     makeObj: function ( keys, values ) {
         var ret = {};

@@ -15,7 +15,7 @@ var isFunc = require( 'is-function' ),
             computed: {
                 title: {
                     get: function () {
-                        return this.get( 'userTitle' ) || `${this.get('userName')}'s Logical Argument`;
+                        return this.get( 'argument.title' ) || `${this.get('user.name')}'s Logical Argument`;
                     }
                 }
             }
