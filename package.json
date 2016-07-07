@@ -2,7 +2,7 @@
     "name": "logic",
     "version": "0.0.0",
     "description": "A Place to Make Logical arguments with others.",
-    "license": "isc",
+    "license": "(ISC OR GPL-3.0)",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/nperez0111/logic.git"
@@ -14,7 +14,7 @@
         "is-function": "^1.0.1",
         "medium.js": "^1.0.1",
         "merge": "^1.2.0",
-        "object-manip": "^1.0.2",
+        "object-manip": "^1.2.0",
         "path-to-regexp": "^1.5.3",
         "ractive": "0.7.3"
     },

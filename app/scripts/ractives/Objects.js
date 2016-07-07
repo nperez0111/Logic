@@ -42,5 +42,6 @@ module.exports = {
     },
     objExtend: function ( previous, next ) {
         return merge.recursive( true, previous, next );
-    }
+    },
+    manip: manip,
 };
